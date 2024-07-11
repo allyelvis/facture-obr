@@ -6,7 +6,8 @@
 </head>
 <body>
     <h1>Create Facture</h1>
-    <form method="post">
+    <form method="post" action="/" enctype="multipart/form-data">
+        <!-- Facture Information -->
         <label for="invoice_number">Invoice Number:</label>
         <input type="text" id="invoice_number" name="invoice_number" required><br>
 
@@ -22,38 +23,35 @@
         <label for="customer_nif">Customer NIF:</label>
         <input type="text" id="customer_nif" name="customer_nif" required><br>
 
+        <!-- Dynamic Items Section -->
         <h3>Items</h3>
-        <label for="product_code">Product Code:</label>
-        <input type="text" id="product_code" name="product_code" required><br>
+        <input type="hidden" id="num_items" name="num_items" value="1">
+        
+        <div id="items-container">
+            <!-- First item -->
+            <div id="item1">
+                <label for="product_code_1">Product Code:</label>
+                <input type="text" id="product_code_1" name="product_code_1" required><br>
 
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description" required><br>
+                <label for="description_1">Description:</label>
+                <input type="text" id="description_1" name="description_1" required><br>
 
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" required><br>
+                <label for="quantity_1">Quantity:</label>
+                <input type="number" id="quantity_1" name="quantity_1" required><br>
 
-        <label for="unit_price">Unit Price:</label>
-        <input type="number" step="0.01" id="unit_price" name="unit_price" required><br>
+                <label for="unit_price_1">Unit Price:</label>
+                <input type="number" step="0.01" id="unit_price_1" name="unit_price_1" required><br>
 
-        <label for="total_price">Total Price:</label>
-        <input type="number" step="0.01" id="total_price" name="total_price" required><br>
+                <label for="total_price_1">Total Price:</label>
+                <input type="number" step="0.01" id="total_price_1" name="total_price_1" required><br>
+            </div>
+        </div>
+        
+        <button type="button" onclick="addNewItem()">Add Item</button><br><br>
 
+        <!-- Total and Payment Information -->
         <label for="total_ht">Total HT:</label>
         <input type="number" step="0.01" id="total_ht" name="total_ht" required><br>
 
-        <label for="tax_rate">Tax Rate:</label>
-        <input type="number" step="0.01" id="tax_rate" name="tax_rate" required><br>
-
-        <label for="payment_method">Payment Method:</label>
-        <input type="text" id="payment_method" name="payment_method" required><br>
-
-        <label for="company_nif">Company NIF:</label>
-        <input type="text" id="company_nif" name="company_nif" required><br>
-
-        <label for="company_vat_subject">Company VAT Subject:</label>
-        <input type="checkbox" id="company_vat_subject" name="company_vat_subject"><br>
-
-        <button type="submit">Create Facture</button>
-    </form>
-</body>
-</html>
+        <label for="tax_rate">Tax Rate (%):</label>
+        <input type="number" step="0.01" id
