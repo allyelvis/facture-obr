@@ -46,3 +46,13 @@ This Flask application provides a web form to create invoices (Factures) and pos
 3. Fill out the form to create an invoice. When you submit the form, the invoice will be created and posted to the EBMS API.
 
 ## File Structure
+# Aenzbi
+
+Business management software including POS functionalities integrated with EBMS Burundi.
+
+## Installation
+
+You can install this package using npm:
+
+```bash
+npm install aenzbi
