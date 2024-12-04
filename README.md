@@ -12,8 +12,8 @@ This Flask application provides a web form to create invoices (Factures) and pos
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/yourrepository.git
-    cd yourrepository
+    git clone https://github.com/allyelvis/facture-obr.git
+    cd facture-obr
     ```
 
 2. Create and activate a virtual environment (optional but recommended):
